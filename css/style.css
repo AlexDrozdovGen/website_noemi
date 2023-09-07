@@ -1,0 +1,380 @@
+/* ШРИФТЫ */
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+}
+
+/*==========================*/
+
+/* FLEXBOX */
+
+.nav_list,
+.aside_main_post,
+.main,
+.section_main_post,
+.post_info_many-tags,
+.post_info_date-and-author,
+.aside,
+.aside_form_search,
+.aside_form_subscribe,
+.aside_tags_ul {
+    display: flex;
+}
+
+.header_inner,
+.section_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*==========================*/
+
+/* HOVER, AFTER, FOCUS */
+
+.nav_list-link:hover {
+    border-bottom: 1px solid var(--color-white);
+}
+
+.post_info_h2:hover {
+    color: var(--color-gold);
+    transition: all 0.2s;
+}
+
+.aside_h4:hover {
+    color: var(--color-gold);
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: rgb(50, 50, 50);
+    transition: all 0.3s;
+}
+
+.aside_tags_ul_li:hover {
+    border-color: grey;
+}
+
+.aside_tags_ul_li:active {
+    border-color: var(--color-gold);
+}
+
+/*-----------*/
+
+.aside_h3::after,
+.form_subscribe_h3-plus::after,
+.aside_categories_h3::after,
+.aside_tags_h3::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-gold);
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 66px;
+    height: 3px;
+}
+
+/*-----------*/
+
+.form_search_input:focus {
+    height: 48px;
+    outline: 1px solid var(--color-gold);
+}
+
+.form_subscribe_input:focus {
+    height: 50px;
+    outline: 1px solid var(--color-gold);
+}
+
+/*==========================*/
+
+/* BUTTON */
+
+.btn {
+    background-color: var(--color-gold);
+    border: none;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    font-family: "Open Sans";
+}
+
+/*==========================*/
+
+/* ЗАГОЛОВКИ (TITLE) */
+
+.title{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.post_info_h2 {
+    font-size: 22px;
+    line-height: 1.2;
+    color: rgb(15, 13, 14);
+    padding: 15px 0 32px;
+}
+
+.h3 {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.h4 {
+    font-size: 14px;
+}
+
+/*==========================*/
+
+
+:root {
+    --color-gold: rgb(181, 159, 91);
+    --color-white: #ffffff;
+}
+
+.input {
+    font-family: "Open Sans";
+    box-sizing: border-box;
+    background-color: rgb(244, 247, 246);
+    max-width: 270px;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    padding: 0 20px;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 65px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px 145px;
+    margin: 0 auto;
+}
+
+.header_logo {
+    max-width: 180px;
+    width: 100%;
+}
+
+.header_inner {
+    padding-top: 30px;
+}
+
+.nav_list {
+    gap: 35px;
+}
+
+.nav_list-link {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--color-white);
+}
+
+.h1 {
+    text-align: center;
+    max-width: 690px;
+    width: 100%;
+    font-size: 45px;
+    line-height: 1.7;
+    color: var(--color-white);
+    margin: 140px auto 0;
+}
+
+.header_img {
+    background: url(/img/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.header::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+}
+
+.main {
+    justify-content: center;
+}
+
+.section_main {
+    flex-direction: column;
+    gap: 65px;
+    margin-right: 120px;
+}
+
+.section_main_post {
+    max-width: 780px;
+    width: 100%;
+    gap: 3.9%;
+}
+
+.section_main_post_img,
+.img_main {
+    max-width: 380px;
+}
+
+.section_main_post_info {
+    max-width: 365px;
+    /* margin-left: 30px; */
+}
+
+.post_info_tag:not(:last-child) {
+    margin-right: 20px;
+}
+
+.post_info_label {
+    display: inline-block;
+    color: var(--color-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.post_info_date-and-author {
+    padding-bottom: 50px;
+    gap: 15px;
+}
+
+.post_info_date {
+    font-size: 13px;
+    color: rgb(136, 136, 136);
+}
+
+.post_info_author {
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.post_info_description {
+    font-size: 15px;
+    color: rgb(15, 13, 14);
+    line-height: 1.5;
+}
+
+.aside {
+    flex-direction: column;
+    max-width: 270px;
+    width: 100%;
+    gap: 60px;
+}
+
+.aside_main_post {
+    gap: 20px;
+}
+
+.aside_main_post:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.aside_img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.aside_date {
+    font-size: 12px;
+    color: rgb(136, 136, 136);
+    margin-bottom: 10px;
+}
+
+.aside_form_search {
+    align-items: center;
+}
+
+.form_search_btn {
+    max-width: 50px;
+}
+
+.form_search_btn_img {
+    display: inline-block;
+    background: url(/img/search.svg) no-repeat;
+    background-position: center center;
+    transform: translateY(2px);
+    height: 20px;
+    width: 20px;
+}
+
+.aside_form_subscribe {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.form_subscribe_input {
+    margin-bottom: 20px;
+}
+
+.form_subscribe_btn {
+    color: var(--color-white);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.aside_tags_ul {
+    flex-wrap: wrap;
+}
+
+/* .aside_tags_ul_li {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px 8px 12px;
+    border: 3px solid #eeeeee;
+    margin: 0 5px 5px 0;
+} */
+
+.checkbox-text {
+    position: relative;
+    display: inline-block;
+    border: 3px solid #eeeeee;
+    padding: 8px 12px 8px 12px;
+}
+
+.checkbox {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    height: 1px;
+    width: 1px;
+}
+
+.checkbox:focus {
+    border: 5px solid red;
+}
+
+/* .checkbox-text::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+} */
+
+.aside_tags_ul_li {
+    position: relative;
+}
